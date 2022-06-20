@@ -1,1 +1,28 @@
-<p>formulary works!</p>
+<div class="container mt-5">
+    <form [formGroup]="postForm" (ngSubmit)="getDataForm()">
+
+        <div>
+            <label for="title" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+        </div>
+
+        <div>
+            <label for="body" class="form-label">Body</label>
+            <input type="text" class="form-control" id="body" formControlName="body">
+        </div>
+
+        <div>
+            <label for="image" class="form-label">Image</label>
+            <input type="text" class="form-control" id="image" formControlName="image">
+        </div>
+
+        <div>
+            <label for="category" class="form-label">Category</label>
+            <select class="form-control" id="category" formControlName="category">
+                <option value="categoria-de-prueba">Seleccione una categoria</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Guardar" class="btn btn-danger mt-5" [disabled]="!postForm.valid">
+    </form>
+</div>
