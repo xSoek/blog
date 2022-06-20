@@ -18,8 +18,9 @@
 
         <div>
             <label for="category" class="form-label">Category</label>
-            <select class="form-control" id="category" formControlName="category">
-                <option value="categoria-de-prueba">Seleccione una categoria</option>
+            <select class="form-select" id="category" formControlName="category">
+                <option disabled>Seleccione una categoria</option>
+                <option *ngFor="let category of arrCategories" [value]="category._id">{{category.name}}</option>
             </select>
         </div>
 
