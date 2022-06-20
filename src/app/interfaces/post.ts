@@ -4,5 +4,5 @@ export interface Post {
     author: string
     image: string
     date: string
-    category: string //TODO: Cambiar a interfaz de cateogria
+    category: number
 }
