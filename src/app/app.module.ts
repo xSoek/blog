@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { FormularyComponent } from './components/formulary/formulary.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularyComponent,
     HomeComponent,
-    PostComponent
+    PostComponent,
+    CategoriesComponent,
+
   ],
   imports: [
     BrowserModule,

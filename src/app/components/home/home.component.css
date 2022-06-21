@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.overlay1, .overlay2{
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.918);
+}
+
+.overlay2{
+    background-color: rgba(15, 15, 15, 0.589);
+    position: absolute;
+    z-index: -1;
+}
+
+.cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.cover h2 {
+    font-size: 15vw;
+}

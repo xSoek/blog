@@ -1,0 +1,58 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.topics {
+    height: 100vh;
+}
+.topics>h1 {
+    height: 100px;
+}
+
+.topics div article{
+    position: relative;
+    height: calc(50vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.topics div article img{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: .5s;
+}
+
+
+.topics div article h2 {
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.651);
+    padding: .5em 2em;
+}
+
+.topics div article:hover h2{
+    background-color: white;
+    color: black;
+}
+
+.topics div article:hover img{
+    transform: scale(1.1);
+}
+
+@media (max-width: 438px) { 
+    .topics div article img{
+        z-index: -1;
+        position: absolute;
+        width: auto;
+        height: 100%;
+        transition: .5s;
+    }
+}
