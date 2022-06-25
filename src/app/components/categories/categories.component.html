@@ -1,10 +1,13 @@
 <section class="topics">
-    <h1 class="text-center">Select your topic</h1>
+    <h1 class="text-center">SELECT YOUR TOPIC</h1>
     <div class="row g-2">
-        <article class="col-12 col-md-6" *ngFor="let category of arrCategories">
-            <img [src]="category.image" alt="">
-            <div class="overlay2"></div>
-            <h2>{{category.name}}</h2>
+        <article class="col-12 col-lg-6" *ngFor="let category of arrCategories" (click)="openCategory(category._id)">
+            <div class="overlay">
+                <img [src]="category.icon" width="70px">
+            </div>
+            <div class="background" [ngStyle]="{'background-image': 'url('+category.image+')'}"></div>
         </article>
     </div>
 </section>
+
+<app-footer></app-footer>

@@ -1,0 +1,9 @@
+footer{
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+p {
+    margin: 0 !important;
+}

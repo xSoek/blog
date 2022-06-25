@@ -13,18 +13,14 @@ section {
 
 }
 
-.overlay1, .overlay2{
+.overlay{
 
     width: 100%;
     height: 100%;
     background-color: rgba(15, 15, 15, 0.918);
 }
 
-.overlay2{
-    background-color: rgba(15, 15, 15, 0.589);
-    position: absolute;
-    z-index: -1;
-}
+
 
 .cover {
     background-repeat: no-repeat;
@@ -46,4 +42,15 @@ section {
 }
 .cover h2 {
     font-size: 15vw;
+    transition: .25s;
+}
+section:hover .cover h2 {
+    font-size: 16vw;
+}
+
+app-footer {
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    z-index: 5;
 }
