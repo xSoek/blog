@@ -1,0 +1,90 @@
+.titleBackground {
+    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1100px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.titleBackground:hover .cont1{
+    transition: .2s;
+    transform: scaleX(0);
+}
+.titleBackground:hover .cont2{
+    transition: .2s;
+    transform: scaleX(0);
+}
+.titleBackground:hover .cont3{
+    transition: .3s;
+    transform: scaleX(0);
+}
+
+.cont1, .cont2, .cont3 {
+    width: 100px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+}
+
+.cont1 {
+    left: 20%;
+}
+
+.cont3 {
+    top:0;
+    left: calc(50% - 50px);
+}
+
+.cont2 { 
+   right: 20%;
+}
+
+.postsContainer {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+    box-shadow: 3px 3px 10px rgb(73, 73, 73);
+}
+
+.card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.815);
+}
+
+.date {
+    right: 10px;
+    position: absolute;
+    bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+button {
+    transition: .2s;
+    position: absolute;
+    bottom: 10px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 3px solid transparent;
+}
