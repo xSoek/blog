@@ -3,3 +3,19 @@ nav {
     width:100%;
     background-color: rgb(27, 27, 27) !important;
 }
+
+button {
+    transition: .2s;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 3px solid transparent;
+}

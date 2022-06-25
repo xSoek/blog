@@ -1,6 +1,8 @@
 .titleBackground {
     display: flex;
     position: relative;
+    justify-content: center;
+    align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -11,19 +13,33 @@
 }
 
 .titleBackground:hover .cont1{
-    transition: .2s;
     transform: scaleX(0);
 }
 .titleBackground:hover .cont2{
-    transition: .2s;
     transform: scaleX(0);
 }
 .titleBackground:hover .cont3{
-    transition: .3s;
     transform: scaleX(0);
 }
 
-.cont1, .cont2, .cont3 {
+.titleBackground:hover h1{
+    transition-delay: .4s;
+    opacity: 1;
+}
+
+h1 {
+    transition: .3s;
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.774);
+    padding: .5em 2em;
+    text-align: center;
+    height: fit-content;
+    opacity: 0;
+}
+
+.titleBackground div {
+    transition: .2s;
     width: 100px;
     height: 100%;
     background-color: rgb(255, 255, 255);
@@ -47,6 +63,7 @@
     padding-top: 100px;
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .card {
@@ -78,7 +95,7 @@ button {
     background-color: transparent;
     color: white;
     border: 3px solid white;
-    padding: 3px 10px;
+    padding: 3px 15px;
     border-radius: 3px;
     font-weight: 700;
 }

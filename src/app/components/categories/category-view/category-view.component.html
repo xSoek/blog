@@ -1,5 +1,6 @@
 <section class="container d-flex flex-column align-items-center mt-2">
     <div class="titleBackground" [ngStyle]="{'background-image': 'url('+category.image+')'}">
+        <h1>{{category.name}}</h1>
         <div class="cont1"></div>
         <div class="cont2"></div>
         <div class="cont3"></div>
@@ -15,10 +16,11 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem molestias labore voluptates quibusdam
                     aut quaerat quidem, inventore vitae maxime nostrum. Lorem, ipsum dolor sit amet consectetur
                     adipisicing elit. Rem molestias labore voluptates quibusdam
-                    aut quaerat quidem</p>
+                    aut quaerat quidem.</p>
                 <button [routerLink]="['/post', post._id]">Ver Post</button>
                 <span class="date">{{post.date}}</span>
             </div>
         </div>
     </div>
 </section>
+<app-footer></app-footer>

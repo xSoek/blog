@@ -55,21 +55,6 @@
 
 }
 
-
-.topics div article h2 {
-
-    display: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.774);
-    padding: .5em 2em;
-    text-overflow: ellipsis;
-    min-width: 300px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-
-
 .topics div article .overlay:hover + .background{
     opacity: 1;
     width: 100%;
