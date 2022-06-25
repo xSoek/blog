@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.overlay{
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.918);
+}
+
+
+
+.cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.cover h2 {
+    font-size: 15vw;
+    transition: .25s;
+}
+section:hover .cover h2 {
+    font-size: 16vw;
+}
+
+app-footer {
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    z-index: 5;
+}
