@@ -10,6 +10,7 @@
     background-color: rgb(41, 41, 41);
     height: 100%;
 }
+
 .topics h1 {
     padding: 0 20px 10px 20px;
     color: rgb(248, 248, 248);
@@ -53,21 +54,6 @@
     height: auto;
 
 }
-
-
-.topics div article h2 {
-
-    display: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.774);
-    padding: .5em 2em;
-    text-overflow: ellipsis;
-    min-width: 300px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-
 
 .topics div article .overlay:hover + .background{
     opacity: 1;

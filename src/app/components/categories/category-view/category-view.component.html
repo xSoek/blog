@@ -1,0 +1,26 @@
+<section class="container d-flex flex-column align-items-center mt-2">
+    <div class="titleBackground" [ngStyle]="{'background-image': 'url('+category.image+')'}">
+        <h1>{{category.name}}</h1>
+        <div class="cont1"></div>
+        <div class="cont2"></div>
+        <div class="cont3"></div>
+    </div>
+
+    <div class="postsContainer row g-4">
+        <div class="card bg-dark text-white mx-1" *ngFor="let post of posts"
+            [ngStyle]="{'background-image': 'url('+post.image+')'}">
+
+            <div class="card-img-overlay">
+                <h3 class="card-title">{{post.title}}</h3>
+                <h5>{{post.author}} </h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem molestias labore voluptates quibusdam
+                    aut quaerat quidem, inventore vitae maxime nostrum. Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Rem molestias labore voluptates quibusdam
+                    aut quaerat quidem.</p>
+                <button [routerLink]="['/post', post._id]">Ver Post</button>
+                <span class="date">{{post.date}}</span>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

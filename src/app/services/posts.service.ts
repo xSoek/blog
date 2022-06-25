@@ -31,17 +31,20 @@ export class PostsService {
     newPost['date'] = finalDate;
     newPost._id = this.arrPosts.length;
     this.arrPosts.push(newPost);
-    console.log(this.arrPosts);
 
     return true;
   }
 
-  getAllPosts(newPost: Post) {
+  getAllPosts() {
     return this.arrPosts;
   }
 
-  getPostsByCategory(category: string) {//TODO: Cambiar a interfaz categoria
-    return this.arrPosts;
+  getPostsByCategory(category: number) {
+    return this.arrPosts.filter(posts => posts.category === category);
+  }
+
+  getPost(id: number) {
+    return this.arrPosts.find(posts => posts._id === id);
   }
 
 }

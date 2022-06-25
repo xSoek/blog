@@ -13,5 +13,5 @@ export class CategoryService {
   }
 
   getAll() { return this.arrCategories }
-
+  getCategoryById(id: number) { return this.arrCategories.find(category => category._id === id) }
 }

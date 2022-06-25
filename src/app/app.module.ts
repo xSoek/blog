@@ -10,6 +10,7 @@ import { PostComponent } from './components/post/post.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CategoryViewComponent } from './components/categories/category-view/category-view.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CategoriesComponent,
     HeaderComponent,
     FooterComponent,
+    CategoryViewComponent,
 
   ],
   imports: [
