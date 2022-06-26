@@ -4,17 +4,28 @@ nav {
     background-color: rgb(27, 27, 27) !important;
 }
 
-button {
+img {
+    cursor: pointer;
+    transition: .2s;
+    height: 50px;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.buttons button{
     transition: .2s;
     background-color: transparent;
     color: white;
     border: 3px solid white;
     padding: 5px 15px;
     border-radius: 3px;
-    font-weight: 700;
+    font-weight: 700; 
+    cursor: pointer;
 }
 
-button:hover {
+.buttons button:hover {
     color: black;
     background-color: white;
     border: 3px solid transparent;

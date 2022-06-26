@@ -21,7 +21,7 @@ export const CATEGORIES: Category[] = [
         icon: "../../assets/snow.png",
     },
     {
-        _id: 4,
+        _id: 3,
         name: "La Playa",
         image: "https://roadsurfer.com/wp-content/uploads/St%C3%A4dtetrip_Spanien_Mallorca-1100x600.jpg",
         icon: "../../assets/beach.png",
