@@ -1,1 +1,41 @@
-<p>post works!</p>
+<section class="container mt-5 py-5">
+    <div class="row">
+        <div class="col col-lg-7 post">
+            <img class="mb-4" [src]="post.image" alt="">
+            <h1 class="text-center">{{post.title}}</h1>
+            <p>{{post.body}}</p>
+            <div class="d-flex justify-content-between align-items-end">
+                <h4>{{post.author}}</h4>
+                <h4 class="date">{{post.date}}</h4>
+            </div>
+        </div>
+
+        <aside class="d-md-none d-lg-block col-lg-3 related">
+            <section>
+                <h3 class="text-center">Choose your topic</h3>
+                <div class="row g-5">
+
+                    <article class="col-6 d-flex justify-content-center" *ngFor="let category of categories"
+                        [routerLink]="['/category', category._id]">
+                        <img [src]="category.icon" alt="">
+                    </article>
+                </div>
+            </section>
+
+            <section *ngIf="similarPosts.length !== 0" class="mt-4">
+                <h3 class="text-center">Related Posts</h3>
+                <div class="card bg-dark text-white mx-3 mb-2" *ngFor="let post of similarPosts">
+                    <div>
+                        <img [src]="post.image" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.title}}</h5>
+                            <p class="card-text ">{{post.body}}</p>
+                            <button [routerLink]="['/post', post._id]">Ver Post</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+</section>
+<app-footer></app-footer>
