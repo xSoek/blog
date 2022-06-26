@@ -1,3 +1,7 @@
+.container {
+    min-height: 93.6vh;
+}
+
 .titleBackground {
     display: flex;
     position: relative;
@@ -27,7 +31,7 @@
     opacity: 1;
 }
 
-h1 {
+.titleBackground h1 {
     transition: .3s;
     font-family: 'Kaushan Script', cursive;
     color: white;
@@ -40,23 +44,23 @@ h1 {
 
 .titleBackground div {
     transition: .2s;
-    width: 100px;
+    width: 75px;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(41, 41, 41);
     position: absolute;
 }
 
 .cont1 {
-    left: 20%;
+    left: 25%;
 }
 
 .cont3 {
     top:0;
-    left: calc(50% - 50px);
+    left: calc(50% - 34.5px);
 }
 
 .cont2 { 
-   right: 20%;
+   right: 25%;
 }
 
 .postsContainer {
@@ -71,13 +75,28 @@ h1 {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    border: none;
     width: 400px;
     height: 300px;
-    box-shadow: 3px 3px 10px rgb(73, 73, 73);
+    box-shadow: 3px 3px 10px rgb(19, 19, 19);
 }
 
 .card-img-overlay {
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0);
+    transition: .2s;
+}
+
+.card-img-overlay * {
+    opacity: 0;
+}
+
+.card-img-overlay p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* number of lines to show */
+    line-clamp: 6; 
+    -webkit-box-orient: vertical;
 }
 
 .date {
@@ -88,20 +107,49 @@ h1 {
     font-weight: 700;
 }
 
-button {
+
+
+.empty-cat button {
+    width: 50%;
     transition: .2s;
-    position: absolute;
-    bottom: 10px;
-    background-color: transparent;
     color: white;
+    background-color: transparent;
     border: 3px solid white;
-    padding: 3px 15px;
+    padding: 7px 15px;
     border-radius: 3px;
+    font-size: 2em;
     font-weight: 700;
 }
 
-button:hover {
+.empty-cat button:hover {
     color: black;
     background-color: white;
     border: 3px solid transparent;
+}
+
+.card button {
+    transition: .2s;
+    position: absolute;
+    bottom: 10px;
+    color: black;
+    background-color: white;
+    border: 3px solid transparent;
+    padding: 3px 15px;
+    border-radius: 3px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.card button:hover {
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+}
+
+.card button:hover + .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.815)
+}
+
+.card button:hover + .card-img-overlay * {
+    opacity: 1;
 }

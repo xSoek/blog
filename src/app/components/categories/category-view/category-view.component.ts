@@ -25,9 +25,8 @@ export class CategoryViewComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.category = this.categoryService.getCategoryById(Number(params['id']))
-      this.posts = this.postsServices.getPostsByCategory(Number(params['id']))
-      console.log(this.category);
 
+      this.posts = this.postsServices.getPostsByCategory(Number(params['id']))
     })
   }
 
