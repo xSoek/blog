@@ -1,11 +1,74 @@
-footer {
-    position: absolute;
-    bottom: 0;
-    z-index: 5;
+.container {
+    height: 90vh;
+    color: white;
+}
+
+label {
+    font-size: 1.5em;
+
+}
+
+input {
+    border: none;
+    background-color: black;
+    box-shadow:inset 0px 0px 0px 2px white;
+    color: white;
+}
+
+input:focus {
+    box-shadow:inset 0px 0px 0px 4px white;
+    background-color: black;
+    color: white;
+    
+}
+
+textarea {
+    box-shadow:inset 0px 0px 0px 2px white;
+    background-color: black;
+    color: white;
+    min-height: 160px;
+    max-height: 160px;
+}
+
+textarea:focus {
+    box-shadow:inset 0px 0px 0px 4px white;
+    background-color: black;
+    color: white;
+}
+
+select {
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    box-shadow:inset 0px 0px 0px 2px white;
+    color: white;
+}
+
+select:focus {
+    box-shadow:inset 0px 0px 0px 4px white;
+    background-color: black;
+    color: white;
+    
+}
+
+button {
+    transition: .2s;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: 700; 
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 3px solid transparent;
 }
 
 app-footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
     z-index: 5;

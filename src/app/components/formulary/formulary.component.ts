@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Category } from 'src/app/interfaces/category';
 import { CategoryService } from 'src/app/services/category.service';
 import { PostsService } from 'src/app/services/posts.service';
@@ -16,7 +17,8 @@ export class FormularyComponent implements OnInit {
   postForm: FormGroup;
   constructor(
     private postsService: PostsService,
-    private categoriesService: CategoryService
+    private categoriesService: CategoryService,
+    private router: Router,
   ) {
     this.arrCategories = this.categoriesService.getAll()
 
@@ -42,8 +44,8 @@ export class FormularyComponent implements OnInit {
   }
 
   getDataForm() {
-
-    console.log(this.postForm.value);
+    this.postForm.value.category = Number(this.postForm.value.category);
     this.postsService.addPost(this.postForm.value)
+    this.router.navigate(['/home']);
   }
 }

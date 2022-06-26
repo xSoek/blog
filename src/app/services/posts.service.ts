@@ -40,7 +40,14 @@ export class PostsService {
   }
 
   getPostsByCategory(category: number) {
-    return this.arrPosts.filter(posts => posts.category === category);
+    console.log(this.arrPosts);
+
+    return this.arrPosts.filter(posts => (posts.category === category));
+  }
+
+
+  getOtherPostsByCategory(currentPostId: number, category: number) {
+    return this.arrPosts.filter(posts => (posts.category === category && currentPostId !== posts._id));
   }
 
   getPost(id: number) {

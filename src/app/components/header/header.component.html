@@ -1,10 +1,11 @@
-<nav class="navbar ">
+<nav class="navbar">
     <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
-        <form class="d-flex">
-            <button class="btn btn-success" [routerLink]="['/home']">Home</button>
-            <button class="btn btn-success mx-3" [routerLink]="['/categories']">Categorias</button>
-            <button class=" btn btn-success" [routerLink]="['/new-post']">Nuevo Post</button>
-        </form>
+        <a [routerLink]="['/home']"><img src="../../../assets/logo.png" alt=""></a>
+
+        <div class="buttons d-flex">
+            <button [routerLink]="['/home']">Home</button>
+            <button class="mx-3" [routerLink]="['/categories']">Categorias</button>
+            <button [routerLink]="['/new-post']">Nuevo Post</button>
+        </div>
     </div>
 </nav>

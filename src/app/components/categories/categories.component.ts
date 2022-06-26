@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Category } from 'src/app/interfaces/category';
 import { CategoryService } from 'src/app/services/category.service';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-categories',
@@ -13,11 +14,15 @@ export class CategoriesComponent implements OnInit {
   constructor(
     private categoriesServices: CategoryService,
     private router: Router,
+    private s: PostsService
   ) {
     this.arrCategories = this.categoriesServices.getAll()
   }
 
   ngOnInit(): void {
+
+    console.log(this.s.getAllPosts());
+
   }
 
   openCategory(id: number) {

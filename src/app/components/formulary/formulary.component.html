@@ -1,22 +1,27 @@
-<div class="container mt-5">
+<div class="container mt-5 pt-5">
     <form [formGroup]="postForm" (ngSubmit)="getDataForm()">
 
-        <div>
+        <div class="mb-5">
             <label for="title" class="form-label">Titulo</label>
             <input type="text" class="form-control" id="title" formControlName="title">
         </div>
 
-        <div>
+        <div class="mb-5">
             <label for="body" class="form-label">Body</label>
-            <input type="text" class="form-control" id="body" formControlName="body">
+            <textarea type="text" class="form-control" id="body" formControlName="body"></textarea>
         </div>
 
-        <div>
+        <div class="mb-5">
             <label for="image" class="form-label">Image</label>
             <input type="text" class="form-control" id="image" formControlName="image">
         </div>
 
-        <div>
+        <div class="mb-5">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" formControlName="author">
+        </div>
+
+        <div class="mb-5">
             <label for="category" class="form-label">Category</label>
             <select class="form-select" id="category" formControlName="category">
                 <option disabled>Seleccione una categoria</option>
@@ -24,7 +29,7 @@
             </select>
         </div>
 
-        <input type="submit" value="Guardar" class="btn btn-danger mt-5" [disabled]="!postForm.valid">
+        <button class="submit-button" type="submit" [disabled]="!postForm.valid"> Añadir Post</button>
     </form>
 </div>
 <app-footer></app-footer>
