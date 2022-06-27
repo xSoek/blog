@@ -1,14 +1,26 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
-section {
-    height: 50vh;
-    width: 100%;
+h1 {
+    font-family: 'Kaushan Script', cursive;
+    color: rgb(248, 248, 248);
+    height: 100px;
+    font-size: 2.75em;
+    font-weight: 700;
+}
+section, article, .cover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+section article {
+    height: 50vh;
+    width: 100%;
+
     position: relative;
 
 }
@@ -21,11 +33,7 @@ section {
 }
 
 
-
 .cover {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     position: absolute;
     color: white;
     font-family: 'Kaushan Script', cursive;
@@ -44,13 +52,38 @@ section {
     font-size: 15vw;
     transition: .25s;
 }
-section:hover .cover h2 {
+article:hover .cover h2 {
     font-size: 16vw;
 }
 
-app-footer {
-    position: sticky;
+.create-new {
+    padding: 2em;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.918), rgba(126, 126, 126, 0)), url('https://www.josephfiler.com/images/xl/Georgia-Mountain-Fall-Sunset-6060.jpg');
+}
+
+.create-new div div div{
+    box-shadow: 0px 0px 10px rgb(240, 240, 240);
+}
+
+.create-new div div div img{
     width: 100%;
-    bottom: 0;
-    z-index: 5;
+}
+
+button {
+    width: 50%;
+    transition: .2s;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 7px 15px;
+    border-radius: 3px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 3px solid transparent;
 }
