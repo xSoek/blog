@@ -7,6 +7,15 @@
     </div>
 
     <div class="postsContainer row g-4">
+        <section>
+            <div class="row g-1 justify-content-center mb-4">
+                <article class="col-2 d-flex justify-content-center" *ngFor="let categoryItem of allCategories"
+                    [routerLink]="['/category', categoryItem._id]">
+                    <img [ngClass]="{'categoryIcon':categoryItem._id !== category._id }" [src]="categoryItem.icon"
+                        alt="">
+                </article>
+            </div>
+        </section>
         <div *ngIf="posts.length === 0" class="d-flex flex-column align-items-center empty-cat">
             <h1 class="text-white text-center"> No hay ningún post para esta categoría</h1>
             <button class=" mt-5" [routerLink]="['/new-post']">Crear Post</button>
@@ -24,4 +33,3 @@
         </div>
     </div>
 </section>
-<app-footer></app-footer>
