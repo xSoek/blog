@@ -10,8 +10,8 @@
             </div>
         </div>
 
-        <aside class="d-md-none d-lg-block col-lg-3 related">
-            <section>
+        <aside class="d-flex flex-sm-column-reverse flex-lg-column col-lg-3 related mt-sm-5">
+            <section class="mt-lg-0  mt-sm-5">
                 <h3 class="text-center">Choose your topic</h3>
                 <div class="row g-5">
 
@@ -22,11 +22,11 @@
                 </div>
             </section>
 
-            <section *ngIf="similarPosts.length !== 0" class="mt-4">
+            <section *ngIf="similarPosts.length !== 0" class="mt-lg-5">
                 <h3 class="text-center">Related Posts</h3>
                 <div class="card bg-dark text-white mx-3 mb-2" *ngFor="let post of similarPosts">
                     <div>
-                        <img [src]="post.image" alt="...">
+                        <img [src]="post.image">
                         <div class="card-body">
                             <h5 class="card-title">{{post.title}}</h5>
                             <p class="card-text ">{{post.body}}</p>
