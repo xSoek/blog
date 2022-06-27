@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import * as bootstrap from 'bootstrap';
 import { Category } from 'src/app/interfaces/category';
 import { CategoryService } from 'src/app/services/category.service';
 import { PostsService } from 'src/app/services/posts.service';
@@ -26,26 +27,50 @@ export class FormularyComponent implements OnInit {
       title: new FormControl('', [
         Validators.required
       ]),
-      body: new FormControl('', [
-        Validators.required
-      ]),
+      body: new FormControl(),
       image: new FormControl('', [
+        Validators.pattern(/(https?:\/\/.*\.(?:png|jpg))/),
         Validators.required,
-        Validators.pattern(/(https?:\/\/.*\.(?:png|jpg))/g)
       ]),
-      category: new FormControl('Seleccione una categoria', [
-        Validators.required
+      author: new FormControl('', [
+        Validators.required,
+      ]),
+      category: new FormControl('', [
+        Validators.required,
       ])
     })
   }
 
   ngOnInit(): void {
 
+    var toastTrigger = document.getElementById('liveToastBtn')
+    var toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', function () {
+        console.log(toastTrigger);
+        var toast = new bootstrap.Toast(toastLiveExample!)
+        toast.show()
+        setTimeout(() => {
+          toast.hide()
+        }, 2000);
+      })
+    }
   }
 
   getDataForm() {
     this.postForm.value.category = Number(this.postForm.value.category);
     this.postsService.addPost(this.postForm.value)
-    this.router.navigate(['/home']);
+    //this.router.navigate(['/home']);
+
+  }
+
+  checkControl(pControlName: string, pErrorName: string): boolean {
+    console.log(this.postForm.get(pControlName));
+
+    if (this.postForm.get(pControlName)?.hasError(pErrorName) && this.postForm.get(pControlName)?.touched) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

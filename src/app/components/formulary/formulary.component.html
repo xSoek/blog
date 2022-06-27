@@ -2,34 +2,53 @@
     <form [formGroup]="postForm" (ngSubmit)="getDataForm()">
 
         <div class="mb-5">
-            <label for="title" class="form-label">Titulo</label>
-            <input type="text" class="form-control" id="title" formControlName="title">
+            <label for="title" class="form-label">Titulo*</label>
+            <input type="text" class="form-control" id="title" formControlName="title"
+                placeholder="Introduce el titulo del post">
+            <p class="error" *ngIf="checkControl('title', 'required')">El campo es obligatorio</p>
         </div>
 
         <div class="mb-5">
-            <label for="body" class="form-label">Body</label>
-            <textarea type="text" class="form-control" id="body" formControlName="body"></textarea>
+            <label for="body" class="form-label">Cuerpo del post</label>
+            <textarea type="text" class="form-control" id="body" formControlName="body"
+                placeholder="Introduce el cuerpo del post"></textarea>
         </div>
 
         <div class="mb-5">
-            <label for="image" class="form-label">Image</label>
-            <input type="text" class="form-control" id="image" formControlName="image">
+            <label for="image" class="form-label">Imagen (URL)*</label>
+            <input type="text" class="form-control" id="image" formControlName="image"
+                placeholder="Introduce la url de la imagen (Debe ser una URL valida)">
+            <p class="error" *ngIf="checkControl('image', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkControl('image', 'pattern')">Debe ser una url valida</p>
         </div>
 
         <div class="mb-5">
-            <label for="author" class="form-label">Author</label>
-            <input type="text" class="form-control" id="author" formControlName="author">
+            <label for="author" class="form-label">Autor*</label>
+            <input type="text" class="form-control" id="author" formControlName="author"
+                placeholder="Introduce el nombre del autor">
+            <p class="error" *ngIf="checkControl('author', 'required')">El campo es obligatorio</p>
         </div>
 
         <div class="mb-5">
-            <label for="category" class="form-label">Category</label>
+            <label for="category" class="form-label">Categoria*</label>
             <select class="form-select" id="category" formControlName="category">
-                <option disabled>Seleccione una categoria</option>
+                <option value="" selected disabled>Seleccione una categoria</option>
                 <option *ngFor="let category of arrCategories" [value]="category._id">{{category.name}}</option>
             </select>
         </div>
 
-        <button class="submit-button" type="submit" [disabled]="!postForm.valid"> Añadir Post</button>
+        <button id="liveToastBtn" class="submit-button" type="submit" [disabled]="!postForm.valid"> Añadir Post</button>
     </form>
+    <p class="mt-2">(*) Estos campos son obligatorios</p>
 </div>
-<app-footer></app-footer>
+
+<div class="toast-alert">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Información</strong>
+        </div>
+        <div class="toast-body">
+            Se ha añadido el post de forma correcta
+        </div>
+    </div>
+</div>
