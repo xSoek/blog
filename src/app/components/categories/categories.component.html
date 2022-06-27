@@ -1,0 +1,11 @@
+<section class="topics mt-5">
+    <h1 class="text-center">SELECCIONA UNA CATEGORIA</h1>
+    <div class="row g-2">
+        <article class="col-12 col-lg-6" *ngFor="let category of arrCategories" (click)="openCategory(category._id)">
+            <div class="overlay">
+                <img [src]="category.icon" width="70px">
+            </div>
+            <div class="background" [ngStyle]="{'background-image': 'url('+category.image+')'}"></div>
+        </article>
+    </div>
+</section>

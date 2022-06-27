@@ -1,0 +1,35 @@
+<section class="container d-flex flex-column align-items-center mt-5 pt-5">
+    <div class="titleBackground" [ngStyle]="{'background-image': 'url('+category.image+')'}">
+        <h1 class="sm-opacity-1">{{category.name}}</h1>
+        <div class="cont1 d-none d-lg-block"></div>
+        <div class="cont2 d-none d-lg-block"></div>
+        <div class="cont3 d-none d-lg-block"></div>
+    </div>
+
+    <div class="postsContainer row g-4">
+        <section>
+            <div class="row g-1 justify-content-center mb-4">
+                <article class="col-2 d-flex justify-content-center" *ngFor="let categoryItem of allCategories"
+                    [routerLink]="['/category', categoryItem._id]">
+                    <img [ngClass]="{'categoryIcon':categoryItem._id !== category._id }" [src]="categoryItem.icon"
+                        alt="">
+                </article>
+            </div>
+        </section>
+        <div *ngIf="posts.length === 0" class="d-flex flex-column align-items-center empty-cat">
+            <h1 class="text-white text-center"> No hay ningún post para esta categoría</h1>
+            <button class=" mt-5" [routerLink]="['/new-post']">Crear Post</button>
+        </div>
+        <div class="card bg-dark text-white mx-3" *ngFor="let post of posts"
+            [ngStyle]="{'background-image': 'url('+post.image+')'}">
+
+            <button [routerLink]="['/post', post._id]">Ver Post</button>
+            <div class="card-img-overlay">
+                <h3 class="card-title">{{post.title}}</h3>
+                <h5>{{post.author}} </h5>
+                <p>{{post.body}}</p>
+                <span class="date">{{post.date}}</span>
+            </div>
+        </div>
+    </div>
+</section>

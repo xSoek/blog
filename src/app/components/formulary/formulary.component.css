@@ -1,0 +1,124 @@
+.container {
+    min-height: 90.9vh;
+    color: white;
+}
+.container>p{
+    color: rgb(173, 173, 173);
+}
+
+label {
+    font-size: 1.5em;
+
+}
+
+input {
+    border: none;
+    background-color: black;
+    box-shadow:inset 0px 0px 0px 2px white;
+    color: white;
+}
+
+input:focus {
+    box-shadow:inset 0px 0px 0px 4px white;
+    background-color: black;
+    color: white;
+    
+}
+
+textarea {
+    box-shadow:inset 0px 0px 0px 2px white;
+    background-color: black;
+    color: white;
+    min-height: 160px;
+    max-height: 160px;
+}
+
+textarea:focus {
+    box-shadow:inset 0px 0px 0px 4px white;
+    background-color: black;
+    color: white;
+}
+
+select {
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    box-shadow:inset 0px 0px 0px 2px white;
+    color: white;
+}
+
+select:focus {
+    box-shadow:inset 0px 0px 0px 4px white;
+    background-color: black;
+    color: white;
+    
+}
+
+button {
+    transition: .2s;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: 700; 
+}
+
+button:disabled {
+    color: rgb(187, 187, 187);
+    border: 3px dashed rgb(187, 187, 187);
+    pointer-events: none;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 3px solid transparent;
+}
+
+.toast-alert {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+}
+
+.toast {
+    color: white;
+    pointer-events: auto;
+    background-color: rgba(39, 39, 39, 0.85) !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(255, 255, 255, 0.322);
+    box-shadow: 0 .5rem 1rem rgba(12, 12, 12, 0.15);
+    border-radius: .25rem;
+}
+
+.toast-header {
+    
+    background-color:rgba(14, 14, 14, 0.85) !important;
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.39);
+}
+
+.toast-body {
+    color: rgb(97, 173, 97);
+    background-color:rgba(24, 24, 24, 0.85) !important;
+}
+
+:is(input, select).ng-valid.ng-touched {  
+    box-shadow:inset 0px 0px 0px 2px lightgreen;
+}
+
+
+:is(input, select).ng-invalid.ng-touched {
+   box-shadow:inset 0px 0px 0px 2px tomato;
+}
+
+.error {
+    color: tomato;
+}
+
+app-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

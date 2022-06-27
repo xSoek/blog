@@ -1,8 +1,9 @@
 export interface Post {
-    id: number
+    _id: number
     title: string
+    body: string
     author: string
     image: string
     date: string
-    category: string //Cambiar a interfaz de cateogria
+    category: number
 }

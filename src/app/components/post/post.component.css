@@ -1,0 +1,65 @@
+.postContainer {
+    min-height: 90.9vh;
+}
+
+section {
+    color: white;
+    overflow-x: hidden;
+}
+
+.post {
+    width: 70%;
+}
+
+.post img{
+    width: 100%;
+}
+
+.post div .date { 
+    font-weight: 700;
+    font-size: .9em;
+}
+
+aside div article img {
+    cursor: pointer;
+    padding: 10px;
+    overflow: visible;
+    border-radius: 10px;
+}
+aside div article img:hover {
+    background-color: rgb(97, 97, 97);
+}
+
+
+.card img {
+    width: 100%;
+}
+
+.card p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    line-clamp: 4; 
+    -webkit-box-orient: vertical;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.815);
+}
+
+button {
+    transition: .2s;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 3px 15px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 3px solid transparent;
+}

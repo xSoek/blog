@@ -1,0 +1,10 @@
+main {
+    background-color: rgb(41, 41, 41);
+}
+
+app-header {
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 5;
+}
