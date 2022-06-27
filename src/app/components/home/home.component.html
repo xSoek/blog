@@ -1,13 +1,31 @@
-<section class="mt-5" [ngStyle]="{'background-image': 'url('+currentImage1+')'}">
-    <div class="overlay"></div>
-    <div class="cover" [ngStyle]="{'background-image': 'url('+currentImage1+')'}">
-        <h2>Viaja</h2>
-    </div>
-</section>
-<section [ngStyle]="{'background-image': 'url('+currentImage2+')'}">
-    <div class="overlay"></div>
-    <div class="cover" [ngStyle]="{'background-image': 'url('+currentImage2+')'}">
-        <h2>Explora</h2>
-    </div>
+<section>
+    <article [ngStyle]="{'background-image': 'url('+currentImage1+')'}">
+        <div class="overlay"></div>
+        <div class="cover" [ngStyle]="{'background-image': 'url('+currentImage1+')'}">
+            <h2>Viaja</h2>
+        </div>
+    </article>
+    <article [ngStyle]="{'background-image': 'url('+currentImage2+')'}">
+        <div class="overlay"></div>
+        <div class="cover" [ngStyle]="{'background-image': 'url('+currentImage2+')'}">
+            <h2>Explora</h2>
+        </div>
+    </article>
 </section>
 <app-categories></app-categories>
+<section class="create-new py-3 mt-5">
+    <h1 class="text-center text-white">CREAR UN NUEVO POST</h1>
+    <div class="container mx-auto">
+        <div class="d-flex flex-column align-items-center mt-5">
+
+            <h3 class="text-white text-center"> Si aun no has descubierto lo que te interesa prueba a publicar, quién
+                sabe
+                puede que encuentres la inspiración recordando alguno de tus viajes...</h3>
+            <div class="my-5">
+                <img
+                    src="https://www.naturettl.com/hub/storage/2040/conversions/141101-10318_Mgt-Ngauruhoe-listing.jpg">
+            </div>
+            <button class=" my-5" [routerLink]="['/new-post']">Crear Post</button>
+        </div>
+    </div>
+</section>

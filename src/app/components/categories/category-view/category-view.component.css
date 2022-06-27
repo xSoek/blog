@@ -63,8 +63,26 @@
    right: 25%;
 }
 
+.categoryIcon {
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.postsContainer article img{
+    transition: .5s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.categoryIcon:hover {
+    filter: grayscale(0%);
+    background-color: rgb(97, 97, 97);
+    
+}
+
+
 .postsContainer {
-    padding-top: 100px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     padding-bottom: 50px;

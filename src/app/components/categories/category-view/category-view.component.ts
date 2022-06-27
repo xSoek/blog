@@ -14,6 +14,7 @@ export class CategoryViewComponent implements OnInit {
 
 
   category: Category | any;
+  allCategories: Category[] = []
   posts: Post | any;
 
   constructor(
@@ -25,7 +26,7 @@ export class CategoryViewComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.category = this.categoryService.getCategoryById(Number(params['id']))
-
+      this.allCategories = this.categoryService.getAll();
       this.posts = this.postsServices.getPostsByCategory(Number(params['id']))
     })
   }

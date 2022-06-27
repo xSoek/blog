@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CategoryViewComponent } from './components/categories/category-view/category-view.component';
+import { E404Component } from './components/e404/e404.component';
 import { FormularyComponent } from './components/formulary/formulary.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'post/:id', component: PostComponent },
   { path: 'categories', component: CategoriesComponent },
   { path: 'category/:id', component: CategoryViewComponent },
-  { path: '**', redirectTo: '/home' },
+  { path: '**', component: E404Component },
 ];
 
 @NgModule({

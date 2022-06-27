@@ -1,11 +1,10 @@
-app-header {
-    position: fixed;
-    width: 100%;
-    top:0;
-    z-index: 5;
-}
-
 main {
     background-color: rgb(41, 41, 41);
 }
 
+app-header {
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 5;
+}

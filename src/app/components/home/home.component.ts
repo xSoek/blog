@@ -15,14 +15,15 @@ export class HomeComponent implements OnInit {
   constructor(
     private categoriesServices: CategoryService
   ) {
-    this.currentImage1 = "https://www.asiatica-viajes.com/DataUpload/Tour/20191219191612-reuniones-en-el-noreste.jpg";
-    this.currentImage2 = "https://x.cdrst.com/foto/localidad/42b3/cover/imagen-cover-3070.jpg";
 
 
+    this.currentImage1 = "https://x.cdrst.com/foto/localidad/42b3/cover/imagen-cover-3070.jpg";
+    this.currentImage2 = "https://www.triptenerife.com/wp-content/uploads/2017/09/teide-tour-1.jpg";
   }
 
   ngOnInit(): void {
 
   }
+
 
 }

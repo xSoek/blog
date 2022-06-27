@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/interfaces/category';
 import { Post } from 'src/app/interfaces/post';
 import { CategoryService } from 'src/app/services/category.service';
@@ -19,18 +19,23 @@ export class PostComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private postsServices: PostsService,
     private categoriesServices: CategoryService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       this.post = this.postsServices.getPost(Number(params['id']))
 
-      if (this.post._id) {
-        this.similarPosts = this.postsServices.getOtherPostsByCategory(this.post._id, this.post.category);
-        if (this.similarPosts.length > 3)
-          this.getSimilarPosts(3);
-
+      if (!this.post) {
+        this.router.navigate(['/home'])
+        return;
       }
+
+      this.similarPosts = this.postsServices.getOtherPostsByCategory(this.post._id, this.post.category);
+      if (this.similarPosts.length > 3)
+        this.getSimilarPosts(3);
+
+
     })
 
     this.categories = this.categoriesServices.getAll();

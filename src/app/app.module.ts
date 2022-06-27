@@ -11,6 +11,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoryViewComponent } from './components/categories/category-view/category-view.component';
+import { E404Component } from './components/e404/e404.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CategoryViewComponent } from './components/categories/category-view/cat
     HeaderComponent,
     FooterComponent,
     CategoryViewComponent,
+    E404Component,
 
   ],
   imports: [
