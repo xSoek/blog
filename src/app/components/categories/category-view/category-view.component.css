@@ -62,13 +62,16 @@
 .cont2 { 
    right: 25%;
 }
-
+.categories {
+    margin-top: 1.5em;
+    width: 100%;
+}
 .categoryIcon {
     filter: grayscale(100%);
     cursor: pointer;
 }
 
-.postsContainer article img{
+.categories article img{
     transition: .5s;
     padding: 10px;
     border-radius: 10px;
